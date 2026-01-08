@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bawa Ventures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Logo -->
+  <header class="header">
+    <img src="Images/Bawalogo.png" alt="Bawa Ventures Logo" class="logo">
+  </header>
+
+  <!-- About Us -->
+  <section class="section">
+    <h2>About Us</h2>
+    <p>
+      <strong>Bawa Ventures</strong> is a trusted supplier of high-quality mobile phone spare parts
+      and professional repairing tools. We specialize in wholesale and retail distribution,
+      serving technicians, retailers, and repair centers with reliable products at competitive prices.
+      <br><br>
+      Our commitment is to quality, consistency, and customer satisfaction, making us a dependable
+      partner in the mobile repair industry.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <h2>Our Core Services</h2>
+    <ul>
+      <li>LCD Screens</li>
+      <li>Charging Flexes</li>
+      <li>Battery Covers</li>
+      <li>OCA Glasses</li>
+      <li>Soldering Irons & Leads</li>
+      <li>Screwdrivers</li>
+      <li>Rework Stations</li>
+      <li>And many more mobile repair tools</li>
+    </ul>
+  </section>
+
+  <!-- Media Gallery (NO CARD BACKGROUND) -->
+  <section class="media-section">
+    <h2>Product Showcase</h2>
+
+    <div class="media-grid">
+
+      <!-- 16:9 Images -->
+      <img src="Images/Screen0.png" alt="Screen 0" class="media wide">
+      <img src="Images/Screen1.png" alt="Screen 1" class="media wide">
+      <img src="Images/Screen2.png" alt="Screen 2" class="media wide">
+
+      <!-- Square Images -->
+      <img src="Images/Screen3.png" alt="Screen 3" class="media square">
+      <img src="Images/Screen4.png" alt="Screen 4" class="media square">
+
+      <!-- Video -->
+      <video
+        class="media wide autoplay-video"
+        muted
+        loop
+        playsinline
+        preload="metadata">
+        <source src="Images/Bawa.mp4" type="video/mp4">
+      </video>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section">
+    <h2>Contact Information</h2>
+
+    <p><strong>Address:</strong><br>
+      No. 37 Murtala Muhammad Way,<br>
+      Opposite UBA Bank, Kano.
+    </p>
+
+    <table>
+      <tr>
+        <th>Department</th>
+        <th>Phone Number</th>
+      </tr>
+      <tr>
+        <td>LCD Bawa</td>
+        <td>07066660446</td>
+      </tr>
+      <tr>
+        <td>Tools</td>
+        <td>08065566556</td>
+      </tr>
+      <tr>
+        <td>TP</td>
+        <td>08100006061</td>
+      </tr>
+      <tr>
+        <td>Case</td>
+        <td>0707469098</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    <p>© 2026 Bawa Ventures. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Auto-play on scroll -->
+  <script>
+    const videos = document.querySelectorAll(".autoplay-video");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.play();
+        } else {
+          entry.target.pause();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    videos.forEach(video => observer.observe(video));
+  </script>
+
+</body>
+</html>
